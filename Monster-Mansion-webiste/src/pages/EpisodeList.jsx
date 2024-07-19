@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import '../assets/styles/EpisodeList'; // Make sure to create this CSS file
+import '../assets/styles/EpisodeList.css'; // Make sure to create this CSS file
 
 const episodes = [
   {

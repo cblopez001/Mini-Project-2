@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../assets/styles/shop';
+import '../assets/styles/shop.css';
 
 const products = [
   // Same product data as before
