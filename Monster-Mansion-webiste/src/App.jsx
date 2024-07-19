@@ -2,8 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Episodes from './pages/Episodes';
+import Home from './pages/LandingPage';
+import Episodes from './pages/EpisodeList';
 import Shop from './pages/Shop';
 
 const App = () => {
