@@ -1,20 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import EpisodeList from './pages/EpisodeList';
-import Shop from './pages/Shop';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ShopPage from './pages/Shop';  // Import your ShopPage component
+import EpisodeList from './components/EpisodeList';  // Import your EpisodeList component
+import './shop.css';  // Ensure CSS is imported
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/episodes" component={EpisodeList} />
-        <Route path="/shop" component={Shop} />
-      </Switch>
+      <div>
+        {/* Define routes for different pages */}
+        <Routes>
+          <Route path="/" element={<ShopPage />} />
+          <Route path="/episodes" element={<EpisodeList />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
     </Router>
   );
 };
 
 export default App;
+
