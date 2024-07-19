@@ -1,0 +1,89 @@
+.subscription-container {
+    background-color: #262626;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .sub-email-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .email-input {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .email-input i {
+    background-color: rgb(176, 57, 232);
+    color: #262626;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+  }
+  
+  .ebox, .btn {
+    border: none;
+    outline: none;
+  }
+  
+  .ebox {
+    width: 0;
+    transition: 0.6s;
+    visibility: hidden;
+  }
+  
+  .email-input:hover > .ebox, .ebox:focus {
+    width: 260px;
+    visibility: visible;
+    padding: 0 10px;
+  }
+  
+  .btn {
+    background-color: rgb(176, 57, 232);
+    color: #262626;
+    text-transform: capitalize;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font: 1.2em;
+  }
+  
+  .sub-platform {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .icon-links {
+    color: rgb(176, 57, 232);
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .icon-links a {
+    text-decoration: none;
+    color: rgb(176, 57, 232);
+  }
+  
+  i:hover {
+    transform: scale(1.3);
+  }
+  
