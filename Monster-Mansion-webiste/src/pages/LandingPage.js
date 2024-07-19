@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import '../assets/styles/landing_page.css';
 
 const LandingPage = () => {
   return (
@@ -33,7 +34,7 @@ const LandingPage = () => {
         </button>
       </div>
       <div className="carousel-accent-div"></div>
-      {/* Continue with the rest of the HTML content from landing_page.html */}
+      {/* Add the rest of the HTML content from landing_page.html */}
     </div>
   );
 };

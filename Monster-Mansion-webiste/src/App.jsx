@@ -1,17 +1,20 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import EpisodeList from './pages/EpisodeList';
 import Shop from './pages/Shop';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/episodes" element={<EpisodeList />} />
-      <Route path="/shop" element={<Shop />} />
-    </Routes>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/episodes" component={EpisodeList} />
+        <Route path="/shop" component={Shop} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
