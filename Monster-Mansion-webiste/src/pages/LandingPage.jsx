@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/landing_page.css'; // Import the CSS file for this page
 
-/*import images */
-import episodeUpdateDemo from '../assets/images/landingPageImages/episodeUpdateDemo';
-import merchCarouselImage from '../assets/images/landingPageImages/merchCarouselImage';
-import subscribeCarouselImage from '../assets/images/landingPageImages/subscribeCarouselImage';
-import femaleIconDemo from '../assets/images/femaleIconDemo';
-import maleIconDemo from '../assets/images/landingPageImages/maleIconDemo';
+/* Import images */
+import episodeUpdateDemo from '../assets/images/landingPageImages/episodeUpdateDemo.png';
+import merchCarouselImage from '../assets/images/landingPageImages/merchCarouselImage.png';
+import subscribeCarouselImage from '../assets/images/landingPageImages/subscribeCarouselImage.png';
+import femaleIconDemo from '../assets/images/landingPageImages/femaleIconDemo.png';
+import maleIconDemo from '../assets/images/landingPageImages/maleIconDemo.png';
 
 const LandingPage = () => {
   return (
-<>
+    <>
       {/* Accent Div */}
       <div className="accent-div"></div>
 
@@ -24,13 +24,13 @@ const LandingPage = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="3000">
-            <img src={subscribeCarouselImage} className="d-block w-100" alt="Episode Update" />
+            <img src={subscribeCarouselImage} className="d-block w-100" alt="Subscribe Carousel" />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src={episodeUpdateDemo} className="d-block w-100" alt="Merchandise" />
+            <img src={episodeUpdateDemo} className="d-block w-100" alt="Episode Update" />
           </div>
           <div className="carousel-item">
-            <img src={merchCarouselImage} className="d-block w-100" alt="Subscribe" />
+            <img src={merchCarouselImage} className="d-block w-100" alt="Merchandise" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -50,7 +50,7 @@ const LandingPage = () => {
         <ul>
           <li>
             <div className="panel-wrapper">
-              <a href="/episode-list.html">
+              <a href="#">
                 <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Episode List" />
                 <div className="overlay">
                   <h3 className="panel-text">Episode List</h3>
@@ -60,7 +60,7 @@ const LandingPage = () => {
           </li>
           <li>
             <div className="panel-wrapper">
-              <a href="/shop.html">
+              <a href="#">
                 <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Merch Shop" />
                 <div className="overlay">
                   <h3 className="panel-text">Merch Shop</h3>
@@ -113,7 +113,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Female icon demo.png" alt="Cherakye Lopez" />
+                    <img src={femaleIconDemo} alt="Cherakye Lopez" />
                     <h2>Cherakye Lopez</h2>
                   </div>
                   <div className="box back">
@@ -124,7 +124,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Male Profile demo.png" alt="Nelson Reyes" />
+                    <img src={maleIconDemo} alt="Nelson Reyes" />
                     <h2>Nelson Reyes</h2>
                   </div>
                   <div className="box back">
@@ -135,7 +135,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Female icon demo.png" alt="Sarah Read" />
+                    <img src={femaleIconDemo} alt="Sarah Read" />
                     <h2>Sarah Read</h2>
                   </div>
                   <div className="box back">
@@ -150,7 +150,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Female icon demo.png" alt="Deryshelle Crews" />
+                    <img src={femaleIconDemo} alt="Deryshelle Crews" />
                     <h2>Deryshelle Crews</h2>
                   </div>
                   <div className="box back">
@@ -161,7 +161,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Male Profile demo.png" alt="Freddy Walker" />
+                    <img src={maleIconDemo} alt="Freddy Walker" />
                     <h2>Freddy Walker</h2>
                   </div>
                   <div className="box back">
@@ -172,7 +172,7 @@ const LandingPage = () => {
               <div className="col-lg-4">
                 <div className="card">
                   <div className="box front">
-                    <img src="/Website Assests/Female icon demo.png" alt="Andreya Bryson" />
+                    <img src={femaleIconDemo} alt="Andreya Bryson" />
                     <h2>Andreya Bryson</h2>
                   </div>
                   <div className="box back">
@@ -214,4 +214,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
