@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/landing_page.css'; // Import the CSS file for this page
 
+/*import images */
+import episodeUpdateDemo from '../assets/images/landingPageImages/episodeUpdateDemo';
+import merchCarouselImage from '../assets/images/landingPageImages/merchCarouselImage';
+import subscribeCarouselImage from '../assets/images/landingPageImages/subscribeCarouselImage';
+import femaleIconDemo from '../assets/images/femaleIconDemo';
+import maleIconDemo from '../assets/images/landingPageImages/maleIconDemo';
+
 const LandingPage = () => {
   return (
 <>
@@ -17,13 +24,13 @@ const LandingPage = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="3000">
-            <img src="/Website Assests/Episode Update demo.png" className="d-block w-100" alt="Episode Update" />
+            <img src={subscribeCarouselImage} className="d-block w-100" alt="Episode Update" />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src="/Website Assests/Merch img demo.png" className="d-block w-100" alt="Merchandise" />
+            <img src={episodeUpdateDemo} className="d-block w-100" alt="Merchandise" />
           </div>
           <div className="carousel-item">
-            <img src="/Website Assests/Subscribe img demo.png" className="d-block w-100" alt="Subscribe" />
+            <img src={merchCarouselImage} className="d-block w-100" alt="Subscribe" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
