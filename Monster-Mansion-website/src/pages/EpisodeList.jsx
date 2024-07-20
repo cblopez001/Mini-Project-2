@@ -29,6 +29,48 @@ const episodes = [
     category: 'Movies',
   },
   // Add other episodes here
+  {
+    title: 'Dracula',
+    imgSrc: draculaImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
+  },
+  {
+    title: 'Bats',
+    imgSrc: batsImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
+  },
+  {
+    title: 'Killer Klowns from Outer Space',
+    imgSrc: killerKlownsImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Games',
+  },
+  {
+    title: 'The Creature from the Black Lagoon',
+    imgSrc: blackLagoonImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Comics',
+  },
+  {
+    title: 'Fright Night',
+    imgSrc: frightNightImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
+  },
+  {
+    title: 'The Thing',
+    imgSrc: theThingImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Comics',
+  },
 ];
 
 const EpisodeList = () => {
@@ -43,7 +85,6 @@ const EpisodeList = () => {
 
   return (
     <div>
-      <Navbar /> {/* Assuming you have a Navbar component */}
 
       <div className="accent-div"></div>
 
