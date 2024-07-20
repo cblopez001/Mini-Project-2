@@ -106,7 +106,7 @@ transition:opacity 0.3s;
 }
 
 .panel-wrapper:hover .overlay{
-background-color: #2626263d;
+background-color: #262626;
 opacity: 1;
 }
 
@@ -173,7 +173,7 @@ padding:0 10px;
 
 .btn{
 background-color: rgb(176, 57, 232) ;
-color:#545252;
+color:#262626;
 text-transform: capitalize;
 padding: 0 10px;
 cursor: pointer;

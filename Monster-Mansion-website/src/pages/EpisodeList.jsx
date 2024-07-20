@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/styles/EpisodeList.css'; // Make sure to create this CSS file
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
+import '../assets/styles/EpisodeList.css'; // Ensure this CSS file doesn't conflict with Font Awesome
 import Footer from '../components/Footer'; // Import the Footer component
 
-// Import Images and Audio
-import littleShopImg from '../assets/images/littleShopImg.jpg';
-import arachnaphobiaImg from '../assets/images/arachnaphobiaImg.jpg'
-import draculaImg from '../assets/images/draculaImg.jpg'
-import audioDemo from '../assets/images/audioDemo.wav'; // Correct the path if necessary
+// Import Images
+
+import littleShopImg from '../assets/images/episodeImages/littleShopImg.jpg';
+import draculaImg from '../assets/images/episodeImages/draculaImg.jpg';
+import batsImg from '../assets/images/episodeImages/batsImg.jpg';
+import blackLagoonImg from '../assets/images/episodeImages/blackLagoonImg.jpg';
+import frightNightImg from '../assets/images/episodeImages/frightNightImg.jpg';
+import theThingImg from '../assets/images/episodeImages/theThing.jpg';
+import killerKlownsImg from '../assets/images/episodeImages/killerKlownsImg.jpg';
+
+//Import Audio Files
+import audioDemo from '../assets/images/audioDemo.wav'; // Ensure this path is correct
+
 
 const episodes = [
+  // Episode data
   {
     title: 'Little Shop of Horrors',
     imgSrc: littleShopImg,
@@ -18,21 +28,7 @@ const episodes = [
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
     category: 'Movies',
   },
-  // Repeat for other episodes with respective data and categories
-  {
-    title: 'Arachnaphobia',
-    imgSrc: arachnaphobiaImg,
-    audioSrc: audioDemo,
-    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-    category: 'Movies',
-  },
-  {
-    title: 'Dracula',
-    imgSrc: draculaImg,
-    audioSrc: audioDemo,
-    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-    category: 'Movies',
-  }
+  // Add other episodes here
 ];
 
 const EpisodeList = () => {
@@ -47,7 +43,8 @@ const EpisodeList = () => {
 
   return (
     <div>
-      
+      <Navbar /> {/* Assuming you have a Navbar component */}
+
       <div className="accent-div"></div>
 
       <div className="filter-container">
@@ -79,7 +76,7 @@ const EpisodeList = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <button type="button" className="btn btn-primary">
-              <i className="fas fa-search"></i>
+              <i className="fas fa-search"></i> {/* Font Awesome icon */}
             </button>
           </form>
         </div>
