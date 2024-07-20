@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../assets/styles/EpisodeList.css'; // Make sure to create this CSS file
+import Footer from '../components/Footer'; // Import the Footer component
 
 // Import Images and Audio
 import littleShopImg from '../assets/images/littleShopImg.jpg';
@@ -91,24 +92,8 @@ const EpisodeList = () => {
 
       <div className="accent-div"></div>
 
-      <footer>
-        <div className="footer-container">
-          <div className="footer-links">
-            <a href="/landing_page.html">Home</a>
-            <a href="#">Episodes</a>
-            <a href="/shop.html">Shop</a>
-          </div>
-          <div className="footer-social">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-          </div>
-          <div className="footer-copyright">
-            <p>Copyright &copy; 2024</p>
-          </div>
-        </div>
-      </footer>
+  {/* Footer */}
+  <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/landing_page.css'; // Import the CSS file for this page
+import '../assets/styles/landingPage.css'; // Import the CSS file for this page
+import Footer from '../components/Footer'; // Import the Footer component
 
 /* Import images */
 import episodeUpdateDemo from '../assets/images/landingPageImages/episodeUpdateDemo.png';
@@ -8,6 +9,7 @@ import merchCarouselImage from '../assets/images/landingPageImages/merchCarousel
 import subscribeCarouselImage from '../assets/images/landingPageImages/subscribeCarouselImage.png';
 import femaleIconDemo from '../assets/images/landingPageImages/femaleIconDemo.png';
 import maleIconDemo from '../assets/images/landingPageImages/maleIconDemo.png';
+import shopButtonImage from '../assets/images/landingPageImages/shopButtonImage.png'
 
 const LandingPage = () => {
   return (
@@ -15,7 +17,6 @@ const LandingPage = () => {
       {/* Accent Div */}
       <div className="accent-div"></div>
 
-      {/* Carousel */}
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -24,13 +25,13 @@ const LandingPage = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="3000">
-            <img src={subscribeCarouselImage} className="d-block w-100" alt="Subscribe Carousel" />
+            <img src={merchCarouselImage} className="d-block w-100" alt="Merch Carousel" />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src={episodeUpdateDemo} className="d-block w-100" alt="Episode Update" />
+            <img src={subscribeCarouselImage} className="d-block w-100" alt="Subscribe Carousel" />
           </div>
           <div className="carousel-item">
-            <img src={merchCarouselImage} className="d-block w-100" alt="Merchandise" />
+            <img src={episodeUpdateDemo} className="d-block w-100" alt="Episode Update Demo" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -50,28 +51,28 @@ const LandingPage = () => {
         <ul>
           <li>
             <div className="panel-wrapper">
-              <a href="#">
-                <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Episode List" />
+              <Link to="/episodes">
+                <img src={shopButtonImage} className="panel-img" alt="Episode List" />
                 <div className="overlay">
                   <h3 className="panel-text">Episode List</h3>
                 </div>
-              </a>
+              </Link>
             </div>
           </li>
           <li>
             <div className="panel-wrapper">
-              <a href="#">
-                <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Merch Shop" />
+              <Link to="/shop">
+                <img src={shopButtonImage} className="panel-img" alt="Merch Shop" />
                 <div className="overlay">
                   <h3 className="panel-text">Merch Shop</h3>
                 </div>
-              </a>
+              </Link>
             </div>
           </li>
         </ul>
       </div>
 
-      {/* Subscription Section */}
+      {/* Subscribe Section */}
       <div className="subscription-container">
         <div className="sub-email-container">
           <div className="email-message">
@@ -92,10 +93,10 @@ const LandingPage = () => {
             <p>Subscribe on all platforms where the show is available!</p>
           </div>
           <div className="icon-links">
-            <a href="https://soundcloud.com/"><i className="fa-brands fa-soundcloud"></i></a>
-            <a href="https://open.spotify.com/"><i className="fa-brands fa-spotify"></i></a>
-            <a href="https://www.apple.com/apple-podcasts/"><i className="fa-solid fa-podcast"></i></a>
-            <a href="https://rss.com/?gad_source=1&gclid=EAIaIQobChMIwJih9vS_hgMVCGdHAR3Y8QXPEAAYASAAEgJ0pfD_BwE"><i className="fa-solid fa-square-rss"></i></a>
+            <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-soundcloud"></i></a>
+            <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-spotify"></i></a>
+            <a href="https://www.apple.com/apple-podcasts/" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-podcast"></i></a>
+            <a href="https://rss.com/?gad_source=1&gclid=EAIaIQobChMIwJih9vS_hgMVCGdHAR3Y8QXPEAAYASAAEgJ0pfD_BwE" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-square-rss"></i></a>
           </div>
         </div>
       </div>
@@ -188,29 +189,11 @@ const LandingPage = () => {
       <div className="accent-div"></div>
 
       {/* Footer */}
-      <footer>
-        <div className="footer-container">
-          <div className="footer-links">
-            <Link to="./LandingPage">Home</Link>
-            <Link to="/episodes">Episodes</Link>
-            <Link to="/shop">Shop</Link>
-          </div>
-          <div className="footer-social">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-          </div>
-          <div className="footer-copyright">
-            <p>Copyright &copy; 2024</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
-      {/* Bootstrap JavaScript */}
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </>
   );
 };
 
 export default LandingPage;
+

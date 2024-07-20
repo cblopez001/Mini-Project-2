@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/shop.css';
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer'; // Import the Footer component
 
+// Example product data
 const products = [
-  // Same product data as before
+  {
+    title: 'Product 1',
+    price: '$10.00',
+    imgSrc: 'path/to/image1.png',
+    description: 'Description for product 1'
+  },
+  // Add more products as needed
 ];
 
 const Shop = () => {
@@ -10,7 +19,6 @@ const Shop = () => {
   const [cartTotal, setCartTotal] = useState(0);
 
   useEffect(() => {
-    // Calculate the total whenever cartItems change
     updateCartTotal();
   }, [cartItems]);
 
@@ -129,25 +137,8 @@ const Shop = () => {
 
       <div className="accent-div"></div>
 
-      {/* Footer */}
-      <footer>
-        <div className="footer-container">
-          <div className="footer-links">
-            <Link to="/">Home</Link>
-            <Link to="/episodes">Episodes</Link>
-            <Link to="/shop">Shop</Link>
-          </div>
-          <div className="footer-social">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-          </div>
-          <div className="footer-copyright">
-            <p>Copyright &copy; 2024</p>
-          </div>
-        </div>
-      </footer>
+  {/* Footer */}
+  <Footer />
     </div>
   );
 };

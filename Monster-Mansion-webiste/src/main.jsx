@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';  // Import your main CSS file here
+import '../src/assets/styles/landingPage.css';  // Import your main CSS file here
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
 
