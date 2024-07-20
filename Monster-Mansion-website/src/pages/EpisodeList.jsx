@@ -12,8 +12,9 @@ import draculaImg from '../assets/images/episodeImages/draculaImg.jpg';
 import batsImg from '../assets/images/episodeImages/batsImg.jpg';
 import blackLagoonImg from '../assets/images/episodeImages/blackLagoonImg.jpg';
 import frightNightImg from '../assets/images/episodeImages/frightNightImg.jpg';
-import theThingImg from '../assets/images/episodeImages/theThing.jpg';
+import theThingImg from '../assets/images/episodeImages/theThingImg.jpg';
 import killerKlownsImg from '../assets/images/episodeImages/killerKlownsImg.jpg';
+
 
 //Import Audio Files
 import audioDemo from '../assets/images/audioDemo.wav'; // Ensure this path is correct
