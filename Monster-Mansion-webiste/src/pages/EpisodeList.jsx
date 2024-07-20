@@ -1,40 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../assets/styles/EpisodeList.css'; // Make sure to create this CSS file
+
+// Import Images and Audio
+import littleShopImg from '../assets/images/littleShopImg.jpg';
+import arachnaphobiaImg from '../assets/images/arachnaphobiaImg.jpg'
+import draculaImg from '../assets/images/draculaImg.jpg'
+import audioDemo from '../assets/images/audioDemo.wav'; // Correct the path if necessary
 
 const episodes = [
   {
     title: 'Little Shop of Horrors',
-    imgSrc: '/Website Assests/ep img 1.jpg',
-    audioSrc: '/Website Assests/Cherlopez Theme Final.wav',
+    imgSrc: littleShopImg,
+    audioSrc: audioDemo,
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
   },
-  // Repeat for other episodes with respective data
+  // Repeat for other episodes with respective data and categories
+  {title: 'Arachnaphobia',
+  imgSrc: arachnaphobiaImg,
+  audioSrc: audioDemo,
+  description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+  category: 'Movies',
+},
+{title: 'Dracula',
+  imgSrc: draculaImg,
+  audioSrc: audioDemo,
+  description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+  category: 'Books',}
 ];
 
 const EpisodeList = () => {
+  const [filter, setFilter] = useState('All');
+
+  const filteredEpisodes = filter === 'All' ? episodes : episodes.filter(episode => episode.category === filter);
+
   return (
     <div>
-      
-    {/* Accent Div */}
-    <div className="accent-div"></div>
+
+      <div className="accent-div"></div>
 
       <div className="filter-container">
         <ul className="filter-wrapper">
           <li className="filter-item">
-            <a href="#" className="filter-link">All</a>
+            <a href="#" className="filter-link" onClick={() => setFilter('All')}>All</a>
           </li>
           <li className="filter-item">
-            <a href="#" className="filter-link">Movies</a>
+            <a href="#" className="filter-link" onClick={() => setFilter('Movies')}>Movies</a>
           </li>
           <li className="filter-item">
-            <a href="#" className="filter-link">Games</a>
+            <a href="#" className="filter-link" onClick={() => setFilter('Games')}>Games</a>
           </li>
           <li className="filter-item">
-            <a href="#" className="filter-link">Books</a>
+            <a href="#" className="filter-link" onClick={() => setFilter('Books')}>Books</a>
           </li>
           <li className="filter-item">
-            <a href="#" className="filter-link">Comics</a>
+            <a href="#" className="filter-link" onClick={() => setFilter('Comics')}>Comics</a>
           </li>
         </ul>
 
@@ -50,11 +71,11 @@ const EpisodeList = () => {
 
       <div className="library-container">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          {episodes.map((episode, index) => (
+          {filteredEpisodes.map((episode, index) => (
             <div className="col" key={index}>
               <div className="card h-100">
                 <a href="#">
-                  <img src={episode.imgSrc} className="card-img-top" alt="..." style={{ width: '100%', height: '800px' }} />
+                  <img src={episode.imgSrc} className="card-img-top" alt="Episode Thumbnail" style={{ width: '100%', height: '800px' }} />
                 </a>
                 <div className="card-body">
                   <h5 className="card-title">{episode.title}</h5>

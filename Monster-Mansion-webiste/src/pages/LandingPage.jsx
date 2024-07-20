@@ -191,7 +191,7 @@ const LandingPage = () => {
       <footer>
         <div className="footer-container">
           <div className="footer-links">
-            <Link to="/">Home</Link>
+            <Link to="./LandingPage">Home</Link>
             <Link to="/episodes">Episodes</Link>
             <Link to="/shop">Shop</Link>
           </div>
