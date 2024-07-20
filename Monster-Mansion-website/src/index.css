@@ -1,8 +1,8 @@
 /* index.css */
-@import './components/Navbar.css';  /* If you have specific styles for Navbar */
-@import './pages/Home.css';         /* If you have specific styles for Home page */
+@import './components/navbar.css';  /* If you have specific styles for Navbar */
+@import './pages/landingPage.css';         /* If you have specific styles for Home page */
 @import './pages/Episodes.css';     /* If you have specific styles for Episodes page */
-@import './pages/Shop.css';         /* If you have specific styles for Shop page */
+@import './pages/shop.css';         /* If you have specific styles for Shop page */
 
 *,.sedan-regular {
     font-family: "Sedan", serif;

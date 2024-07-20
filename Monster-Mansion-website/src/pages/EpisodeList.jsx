@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/EpisodeList.css'; // Make sure to create this CSS file
 import Footer from '../components/Footer'; // Import the Footer component
 
@@ -18,27 +19,35 @@ const episodes = [
     category: 'Movies',
   },
   // Repeat for other episodes with respective data and categories
-  {title: 'Arachnaphobia',
-  imgSrc: arachnaphobiaImg,
-  audioSrc: audioDemo,
-  description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-  category: 'Movies',
-},
-{title: 'Dracula',
-  imgSrc: draculaImg,
-  audioSrc: audioDemo,
-  description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-  category: 'Books',}
+  {
+    title: 'Arachnaphobia',
+    imgSrc: arachnaphobiaImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
+  },
+  {
+    title: 'Dracula',
+    imgSrc: draculaImg,
+    audioSrc: audioDemo,
+    description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+    category: 'Movies',
+  }
 ];
 
 const EpisodeList = () => {
   const [filter, setFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredEpisodes = filter === 'All' ? episodes : episodes.filter(episode => episode.category === filter);
+  const filteredEpisodes = episodes.filter(episode => {
+    const matchesCategory = filter === 'All' || episode.category === filter;
+    const matchesSearch = episode.title.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div>
-
+      
       <div className="accent-div"></div>
 
       <div className="filter-container">
@@ -62,7 +71,13 @@ const EpisodeList = () => {
 
         <div className="search">
           <form action="#">
-            <input type="search" className="form-control" placeholder="Search" />
+            <input
+              type="search"
+              className="form-control"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
             <button type="button" className="btn btn-primary">
               <i className="fas fa-search"></i>
             </button>
@@ -92,8 +107,8 @@ const EpisodeList = () => {
 
       <div className="accent-div"></div>
 
-  {/* Footer */}
-  <Footer />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
