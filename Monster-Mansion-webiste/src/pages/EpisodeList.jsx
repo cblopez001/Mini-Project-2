@@ -15,13 +15,9 @@ const episodes = [
 const EpisodeList = () => {
   return (
     <div>
-      <Navbar />
-      <div className="accent-div"></div>
-      <div className="title-container">
-        <div className="page-title">
-          <h2 className="title">Episode Library</h2>
-        </div>
-      </div>
+      
+    {/* Accent Div */}
+    <div className="accent-div"></div>
 
       <div className="filter-container">
         <ul className="filter-wrapper">

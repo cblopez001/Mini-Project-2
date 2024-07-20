@@ -1,11 +1,14 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
+import '../assets/styles/landing_page.css'; // Import the CSS file for this page
 
 const LandingPage = () => {
   return (
-    <div>
-      <Navbar />
+<>
+      {/* Accent Div */}
       <div className="accent-div"></div>
+
+      {/* Carousel */}
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -14,13 +17,13 @@ const LandingPage = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="3000">
-            <img src="/Website Assests/Episode Update demo.png" className="d-block w-100" alt="..." />
+            <img src="/Website Assests/Episode Update demo.png" className="d-block w-100" alt="Episode Update" />
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src="/Website Assests/Merch img demo.png" className="d-block w-100" alt="..." />
+            <img src="/Website Assests/Merch img demo.png" className="d-block w-100" alt="Merchandise" />
           </div>
           <div className="carousel-item">
-            <img src="/Website Assests/Subscribe img demo.png" className="d-block w-100" alt="..." />
+            <img src="/Website Assests/Subscribe img demo.png" className="d-block w-100" alt="Subscribe" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -32,10 +35,176 @@ const LandingPage = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
       <div className="carousel-accent-div"></div>
-      {/* Continue with the rest of the HTML content from landing_page.html */}
-    </div>
+
+      {/* Shop and Episode Buttons */}
+      <div className="link-container">
+        <ul>
+          <li>
+            <div className="panel-wrapper">
+              <a href="/episode-list.html">
+                <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Episode List" />
+                <div className="overlay">
+                  <h3 className="panel-text">Episode List</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div className="panel-wrapper">
+              <a href="/shop.html">
+                <img src="/Website Assests/Shop Link demo.png" className="panel-img" alt="Merch Shop" />
+                <div className="overlay">
+                  <h3 className="panel-text">Merch Shop</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      {/* Subscription Section */}
+      <div className="subscription-container">
+        <div className="sub-email-container">
+          <div className="email-message">
+            <h1>NEWSLETTER</h1>
+            <p>Never miss an episode. Sign up for our newsletter mailing list!</p>
+          </div>
+          <form className="email-form">
+            <div className="email-input">
+              <i className="fa-regular fa-envelope"></i>
+              <input className="ebox" type="email" placeholder="Enter your email" />
+              <button className="btn" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div className="sub-platform">
+          <div className="sub-message">
+            <h1>SUBSCRIBE</h1>
+            <p>Subscribe on all platforms where the show is available!</p>
+          </div>
+          <div className="icon-links">
+            <a href="https://soundcloud.com/"><i className="fa-brands fa-soundcloud"></i></a>
+            <a href="https://open.spotify.com/"><i className="fa-brands fa-spotify"></i></a>
+            <a href="https://www.apple.com/apple-podcasts/"><i className="fa-solid fa-podcast"></i></a>
+            <a href="https://rss.com/?gad_source=1&gclid=EAIaIQobChMIwJih9vS_hgMVCGdHAR3Y8QXPEAAYASAAEgJ0pfD_BwE"><i className="fa-solid fa-square-rss"></i></a>
+          </div>
+        </div>
+      </div>
+
+      {/* Reviews Section */}
+      <div className="review-container">
+        <div className="about-host">
+          <h2>Listener Reviews</h2>
+        </div>
+      </div>
+      <div className="listener-container">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Female icon demo.png" alt="Cherakye Lopez" />
+                    <h2>Cherakye Lopez</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam suscipit atque accusamus, nobis totam eos?</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Male Profile demo.png" alt="Nelson Reyes" />
+                    <h2>Nelson Reyes</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis dolore vero necessitatibus labore sed cum mollitia fugiat rem incidunt!</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Female icon demo.png" alt="Sarah Read" />
+                    <h2>Sarah Read</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officiis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Female icon demo.png" alt="Deryshelle Crews" />
+                    <h2>Deryshelle Crews</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam suscipit atque accusamus, nobis totam eos?</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Male Profile demo.png" alt="Freddy Walker" />
+                    <h2>Freddy Walker</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis dolore vero necessitatibus labore sed cum mollitia fugiat rem incidunt!</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="card">
+                  <div className="box front">
+                    <img src="/Website Assests/Female icon demo.png" alt="Andreya Bryson" />
+                    <h2>Andreya Bryson</h2>
+                  </div>
+                  <div className="box back">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officiis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="accent-div"></div>
+
+      {/* Footer */}
+      <footer>
+        <div className="footer-container">
+          <div className="footer-links">
+            <Link to="/">Home</Link>
+            <Link to="/episodes">Episodes</Link>
+            <Link to="/shop">Shop</Link>
+          </div>
+          <div className="footer-social">
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-youtube"></i></a>
+          </div>
+          <div className="footer-copyright">
+            <p>Copyright &copy; 2024</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Bootstrap JavaScript */}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </>
   );
 };
 
 export default LandingPage;
+
