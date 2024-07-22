@@ -57,6 +57,10 @@ ul {
 }
 
 /* Merch Section */
+.merch-sec {
+  margin-bottom: 4rem; /* Add margin to create space below the merch section */
+}
+
 .merch-container > .row {
   margin: 10px;
   padding-left: 8%;
@@ -71,6 +75,10 @@ ul {
 }
 
 /* Cart Section */
+.cart-sec {
+  margin-top: 15rem; /* Add margin to create space above the cart section */
+}
+
 .cart-header {
   font-weight: bold;
   font-size: 1.2em;

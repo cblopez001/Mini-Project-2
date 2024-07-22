@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/shop.css';
-import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 import Footer from '../components/Footer'; // Import the Footer component
 
-// Example product data
+/* Import images */
+import mugImg from '../assets/images/shopImages/mugImg.png';
+import hoodieImg from '../assets/images/shopImages/hoodieImg.png';
+
+// Product Data
 const products = [
   {
-    title: 'Product 1',
+    title: 'Monster Mash Mug',
     price: '$10.00',
-    imgSrc: 'path/to/image1.png',
+    imgSrc: mugImg,
     description: 'Description for product 1'
   },
-  // Add more products as needed
+  {
+    title: 'Monster Mansion Hoodie',
+    price: '$20.00',
+    imgSrc: hoodieImg,
+    description: 'Description for product 2'
+  },
 ];
 
 const Shop = () => {
@@ -137,8 +147,8 @@ const Shop = () => {
 
       <div className="accent-div"></div>
 
-  {/* Footer */}
-  <Footer />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
